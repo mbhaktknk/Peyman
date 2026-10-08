@@ -5,6 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes">
 <title>پیگیری قرارداد آبرسانی ۱۲۰۶</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0369a1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="پیمان">
+<link rel="apple-touch-icon" href="icon-180.png">
 <style>
 :root{--bg:#e9f2f9;--card:#fff;--ink:#0a2540;--mute:#587591;--line:#d3e3ef;--brand:#0369a1;--ob:#fff;--r:14px}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#061325;--card:#0c2038;--ink:#e6f1fb;--mute:#88a5c2;--line:#173553;--brand:#38bdf8;--ob:#04243b}}
@@ -2204,6 +2209,13 @@ function notifyNow(){
 setTimeout(notifyNow,1500);
 
 go('home');
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
